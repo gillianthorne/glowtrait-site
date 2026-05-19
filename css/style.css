@@ -25,14 +25,14 @@
     margin-top: 10px;
 }
 
-.user-select {
+#landing-page .user-select {
     position: relative;
     max-width: 500px;
     margin: 0 auto;
     padding: 6px 0 4px 60px;
 }
 
-.user-select p {
+#landing-page .user-select p {
     display: inline-block;
     width: fit-content;
     margin-left: 10px;
@@ -47,4 +47,32 @@
 
 #landing-page a div:hover {
     background-color: lightgray;
+}
+
+/* main page select */
+#user-home .home-select {
+    display: flex;
+    align-items: flex-end;
+    border: 3px solid red;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#user-home .home-select a {
+    width: 30%;
+    margin: 0 auto;
+}
+
+#user-home .home-select-option {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#user-home .home-select-option h2 {
+    margin: 5px;
+}
+
+#user-home .home-select-option img {
+    width: 100%;
 }
