@@ -1,0 +1,27 @@
+:root {
+    --background-colour: #ad8ec2;
+    --accent-1: #290d3b;
+    --accent-2: #5b3e70;
+    --text-light: #dddddd;
+    --text-dark: #111111;
+}
+
+body {
+    color: var(--text-dark);
+}
+
+#user-chapters header, #user-chapters footer {
+    background-color: var(--accent-2);
+    color: var(--text-light);
+}
+
+@media screen and (width >= 800px) {
+    #user-chapters nav {
+        background-color: var(--accent-2);
+        color: var(--text-light);
+    }
+
+    #user-chapters main {
+        background-color: var(--background-colour);
+    }
+}

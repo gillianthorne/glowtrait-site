@@ -1,3 +1,16 @@
+/* global settings */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+    --global-padding: 8px;
+}
+
+.width-800 {
+    max-width: 800px;
+}
+
 /* landing page specific styling */
 #landing-page main {
     display: flex;
@@ -15,7 +28,7 @@
     margin: 0 auto;
 }
 
-#landing-page .pfp {
+#landing-page .pfp, #user-chapters .pfp {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -53,7 +66,6 @@
 #user-home .home-select {
     display: flex;
     align-items: flex-end;
-    border: 3px solid red;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -75,4 +87,78 @@
 
 #user-home .home-select-option img {
     width: 100%;
+}
+
+#user-chapters header {
+    padding: 0 20px;
+}
+
+#user-chapters header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+#user-chapters div {
+    text-align: center;
+}
+
+#user-chapters header p {
+    margin: 0;
+}
+
+#switch-users {
+    padding: 10px;
+    width: 140px;
+}
+
+#switch-users img {
+    float: left;
+}
+
+@media screen and (width >= 800px) {
+    #user-chapters h1 {
+        margin: 0;
+        padding: 0;
+    }
+    #user-chapters header {
+        height: 75px;
+        align-items: center;
+        padding: 0 50px 0 220px;
+    }
+    #user-chapters nav {
+        width: 200px;
+        height: calc(100% - 75px - 40px);
+        position: fixed;
+        overflow: auto;
+    }
+
+    #user-chapters nav ul li {
+        list-style: none;
+        padding: 6px;
+    }
+    
+    #user-chapters nav ul {
+        margin: 0;
+        padding: 0 15px;
+    }
+
+    #user-chapters main {
+        position: fixed;
+        top: 75px;
+        left: 200px;
+        padding: var(--global-padding);
+        width: 100%;
+        height: calc(100% - 75px - 40px);
+        overflow: auto;
+    }
+
+    #user-chapters footer {
+        height: 40px;
+        padding: var(--global-padding);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
 }
