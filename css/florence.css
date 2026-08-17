@@ -2,15 +2,17 @@
     --background-colour: #ad8ec2;
     --accent-1: #290d3b;
     --accent-2: #5b3e70;
+    --accent-2-darker: #432c53;
     --text-light: #dddddd;
     --text-dark: #111111;
 }
 
 body {
     color: var(--text-dark);
+    background-color: var(--background-colour);
 }
 
-#user-chapters header, #user-chapters footer {
+#user-chapters header, #user-chapters footer, #hamburger{
     background-color: var(--accent-2);
     color: var(--text-light);
 }
@@ -21,7 +23,8 @@ body {
         color: var(--text-light);
     }
 
-    #user-chapters main {
-        background-color: var(--background-colour);
+
+    #user-chapters #switch-users:hover {
+        background-color: var(--accent-2-darker);
     }
 }

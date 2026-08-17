@@ -90,10 +90,6 @@
 }
 
 #user-chapters header {
-    padding: 0 20px;
-}
-
-#user-chapters header {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -116,21 +112,35 @@
     float: left;
 }
 
+
 @media screen and (width >= 800px) {
     #user-chapters h1 {
         margin: 0;
         padding: 0;
     }
     #user-chapters header {
-        height: 75px;
+        height: 65px;
         align-items: center;
         padding: 0 50px 0 220px;
     }
+
+    #hamburger {
+        font-size: 36px;
+        margin: 0;
+        padding-right: var(--global-padding);
+        text-align: right;
+        z-index: 150;
+
+    }
+
     #user-chapters nav {
         width: 200px;
-        height: calc(100% - 75px - 40px);
+        height: calc(100% - 65px - 40px);
         position: fixed;
+        left: 0;
+
         overflow: auto;
+        z-index: 100;
     }
 
     #user-chapters nav ul li {
@@ -141,16 +151,34 @@
     #user-chapters nav ul {
         margin: 0;
         padding: 0 15px;
+        clear: both;
+    }
+
+    #user-chapters nav:not(.open) {
+        transform: translateX(-200px);
+    }
+
+    #user-chapters nav:not(.open) #hamburger {
+        position: fixed;
+        transform: translateX(200px);
+        padding: 0 10px;
+        border-radius: 0 0 50% 0;
     }
 
     #user-chapters main {
         position: fixed;
-        top: 75px;
+        top: 65px;
         left: 200px;
         padding: var(--global-padding);
         width: 100%;
-        height: calc(100% - 75px - 40px);
+        height: calc(100% - 65px - 40px);
         overflow: auto;
+        z-index: 50;
+    }
+
+    #user-chapters .full {
+        left: 0;
+        padding-left: 75px;
     }
 
     #user-chapters footer {
@@ -161,4 +189,5 @@
         width: 100%;
         text-align: center;
     }
+
 }
